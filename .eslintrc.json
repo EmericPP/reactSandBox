@@ -109,6 +109,18 @@
     "no-plusplus": "off",
     "no-prototype-builtins": "warn",
     "no-restricted-syntax": ["warn", "WithStatement", "BinaryExpression[operator='in']"],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [{
+          "name": "styled-components",
+          "message": "Please import from styled-components/macro."
+        }],
+        "patterns": [
+          "!styled-components/macro"
+        ]
+      }
+    ],
     "no-undef": "error",
     "no-underscore-dangle": "off",
     "no-unused-expressions": "off",
@@ -125,7 +137,7 @@
     "no-restricted-globals": "warn",
     "no-trailing-spaces": "off",
     "no-var": "warn",
-    "operator-linebreak.": "none",
+    "operator-linebreak.": "off",
     "object-shorthand": ["error", "always"],
     "object-curly-newline": "off",
     "object-curly-spacing": "off",
